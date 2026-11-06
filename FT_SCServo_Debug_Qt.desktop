@@ -1,0 +1,15 @@
+[Desktop Entry]
+Categories=System;Monitor;ConsoleOnly;
+Comment=Debugging tool for Feetech and Waveshare SC-series servo motors
+Exec=FT_SCServo_Debug_Qt
+GenericName=FT Servo Debug
+Icon=crosshairs
+Keywords=servo;debug;dev
+Name=FT_SCServo_Debug_Qt
+NoDisplay=false
+Path=
+StartupNotify=true
+Type=Application
+Version=1.1.0
+X-KDE-SubstituteUID=false
+X-KDE-Username=

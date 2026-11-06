@@ -49,6 +49,12 @@ cd FT_SCServo_Debug_Qt/deb
 bash create_deb.bash
 ```
 
+## Install executable and desktop entry
+```
+install FT_SCServo_Debug_Qt ~/.local/bin/                                # executable
+install -m 644 FT_SCServo_Debug_Qt.desktop ~/.local/share/applications/  # desktop entry
+```
+
 
 ## ⚠️Unported Features⚠️
 - Upgrade tab & features
