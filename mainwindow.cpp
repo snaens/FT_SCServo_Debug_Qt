@@ -300,13 +300,20 @@ void MainWindow::regWritePos(int pos, int time, int speed, int acc)
 
 void MainWindow::onPortSearchTimerTimeout()
 {
-    if(serial_->isOpen())
+    if (serial_->isOpen())
         return;
 
+    const QString selectedPort = ui->ComComboBox->currentText();
+    const auto ports = QSerialPortInfo::availablePorts();
+
     ui->ComComboBox->clear();
-    for (const auto &info : QSerialPortInfo::availablePorts()) {
+
+    for (const auto &info : ports)
         ui->ComComboBox->addItem(info.portName());
-    }
+
+    const int index = ui->ComComboBox->findText(selectedPort);
+    if (index >= 0)
+        ui->ComComboBox->setCurrentIndex(index);
 }
 
 void MainWindow::onConnectButtonClicked()
